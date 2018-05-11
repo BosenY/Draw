@@ -37,7 +37,7 @@ class Draw {
     }
   }
   init(parent) {
-    setInterval(() => {
+    const timer = setInterval(() => {
       if (this.count < this.maxNum) {
         this.count += 1
         const odiv = window.document.createElement('div')
@@ -45,6 +45,9 @@ class Draw {
         odiv.style.position = 'absolute'
         parent.appendChild(odiv)
         this.draw(odiv)
+      }
+      if (this.maxNum === 0) {
+        clearInterval(timer)
       }
     }, 1000)
   }
