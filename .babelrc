@@ -1,0 +1,18 @@
+{
+  "env": {
+    "test": {
+      "presets": ["env"]
+    },
+    "build": {
+      "presets": [
+        [
+          "env",
+          {
+            "modules": false,
+            "loose": true
+          }
+        ]
+      ]
+    }
+  }
+}
