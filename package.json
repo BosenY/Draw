@@ -1,0 +1,40 @@
+{
+  "name": "draw",
+  "version": "0.0.1-development",
+  "description": "A plugin of drawing something",
+  "main": "main.js",
+  "scripts": {
+    "test": "jest",
+    "lint": "./node_modules/.bin/eslint src/* test/*",
+    "build": "BABEL_ENV=build rollup -c",
+    "gzip-size": "gzip-size ./dist/*.min.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BosenY/Draw.git"
+  },
+  "keywords": [
+    "draw"
+  ],
+  "author": "boseny",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BosenY/Draw/issues"
+  },
+  "homepage": "https://github.com/BosenY/Draw#readme",
+  "devDependencies": {
+    "@babel/core": "^7.0.0-beta.46",
+    "@babel/preset-env": "^7.0.0-beta.46",
+    "babel-core": "^6.26.3",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.11.0",
+    "eslint-plugin-jest": "^21.15.1",
+    "gzip-size-cli": "^2.1.0",
+    "jest": "^22.4.3",
+    "rollup": "^0.58.2",
+    "rollup-plugin-babel": "^3.0.4",
+    "rollup-plugin-commonjs": "^9.1.3",
+    "rollup-plugin-uglify": "^3.0.0"
+  }
+}

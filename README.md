@@ -20,7 +20,7 @@ new(options)
 | maxNum | number | max num of the screen 默认30个 |
 | iconText | string | 飘落的个体 默认 ❉ |
 | color | string | 飘落个体的颜色 默认 #fff |
-| stop() | function | stop draw |
+| end() | function | stop draw |
 
 
 ```javascript
@@ -29,5 +29,5 @@ let flame = document.getElementById('flame')
 let draw1 = new Draw()
 let draw2 = new Draw({ parent: flame, maxNum: 2 , iconText: "✨"})
 let draw3 = new Draw({ maxNum: 10, iconText: "❤️"})
-draw3.stop()
+draw3.end()
 ```
