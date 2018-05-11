@@ -14,7 +14,8 @@
     "url": "https://github.com/BosenY/Draw.git"
   },
   "keywords": [
-    "draw"
+    "draw",
+    "plugin"
   ],
   "author": "boseny <yxy43445@gmail.com>",
   "license": "MIT",
