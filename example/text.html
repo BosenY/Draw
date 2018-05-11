@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script src="https://unpkg.com/draw-something@0.0.2-development/dist/draw.min.js"></script>
+    <script>
+        const flame = window.document.getElementById('flame')
+        const draw1 = new Draw({ color: "#000"})
+        const draw2 = new Draw({ parent: flame, maxNum: 2, iconText: '✨' })
+        const draw3 = new Draw({ maxNum: 10, iconText: '❤️' })
+    </script>
+</body>
+</html>
