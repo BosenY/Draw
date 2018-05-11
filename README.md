@@ -8,7 +8,15 @@ CDN
 ```html
 <script src="https://unpkg.com/draw-something/dist/draw.min.js"></script>
 ```
+NPM
+```js
+//install
+npm i draw-something
 
+//use
+import Draw from 'draw-something'
+new Draw()
+```
 ## options
 new(options)
 
