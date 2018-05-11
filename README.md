@@ -4,11 +4,9 @@
 
 ## use
 
-将Draw.js下载下来之后引入：
-
-```javascript
-import Draw from './Draw.js'
-new Draw()
+CDN
+```html
+<script src="https://unpkg.com/draw-something/dist/draw.min.js"></script>
 ```
 
 ## options
