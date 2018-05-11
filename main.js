@@ -1,2 +1,3 @@
-import Draw from './src/index.js'
+import Draw from './src'
+
 export default Draw

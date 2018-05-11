@@ -24,10 +24,10 @@ new(options)
 
 | Option name | Type | Description |
 | --- | --- | --- |
-| parent | Dom object | a parent dom object 默认在body上创建 |
-| maxNum | number | max num of the screen 默认30个 |
-| iconText | string | 飘落的个体 默认 ❉ |
-| color | string | 飘落个体的颜色 默认 #fff |
+| parent | Dom object | a parent dom object 默认在body上创建`draw-wrap${Draw.id}`, id初始值为0逐个递增 |
+| maxNum | number | max num of the screen,默认`30` |
+| iconText | string | 飘落的个体,默认 `❉` |
+| color | string | 飘落个体的颜色,默认 `#fff`|
 | end() | function | stop draw |
 
 

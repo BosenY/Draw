@@ -29,11 +29,11 @@ class Draw {
     }
     if (Draw.isDom(this.parent)) {
       if (typeof this.maxNum !== 'number') {
-        throw TypeError('maxNum必须是一个正整数')
+        throw TypeError(`Invalid value for option maxNum: expected a number, but got ${typeof this.maxNum}`)
       }
       this.init(this.parent)
     } else {
-      throw TypeError('请传入正确的根节点')
+      throw TypeError(`Invalid value for option parent: expected an Object, but got ${typeof this.parent}`)
     }
   }
   init(parent) {

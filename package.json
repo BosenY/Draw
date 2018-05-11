@@ -1,6 +1,6 @@
 {
   "name": "draw-something",
-  "version": "0.0.4-development",
+  "version": "0.0.5-development",
   "description": "A plugin of drawing something",
   "main": "main.js",
   "scripts": {
