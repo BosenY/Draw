@@ -19,8 +19,8 @@ class Draw {
     this.color = color || '#fff'
     this.count = 0 // 数量
     this.parent = parent
-    this.eles = []
-
+    this.clientWidth = window.document.documentElement.clientWidth
+    this.clientHeight = window.document.documentElement.clientHeight
     if (!this.parent) {
       this.parent = window.document.createElement('div')
       this.parent.id = `draw-wrap${Draw.id}`
@@ -40,10 +40,10 @@ class Draw {
     setInterval(() => {
       if (this.count < this.maxNum) {
         this.count += 1
-        const odiv = window.document.createElement('div') // 创建div
-        odiv.innerHTML = this.iconText // div的内容
-        odiv.style.position = 'absolute' // div的绝对定位
-        parent.appendChild(odiv) // 把创建好的div放进flame中
+        const odiv = window.document.createElement('div')
+        odiv.innerHTML = this.iconText
+        odiv.style.position = 'absolute'
+        parent.appendChild(odiv)
         this.draw(odiv)
       }
     }, 1000)
@@ -60,11 +60,11 @@ class Draw {
     )
   }
   draw(ele) {
-    const startPosLeft = Math.ceil(Math.random() * window.document.documentElement.clientWidth)
+    const startPosLeft = Math.ceil(Math.random() * this.clientWidth)
     const rate = Number.parseInt(Math.random() * 3, 10) + 1
     let range =
-      startPosLeft > window.document.documentElement.clientWidth - startPosLeft
-        ? window.document.documentElement.clientWidth - startPosLeft
+      startPosLeft > this.clientWidth - startPosLeft
+        ? this.clientWidth - startPosLeft
         : startPosLeft
     range = Number.parseInt(Math.random() * range, 10)
     let flag = Draw.random50()
@@ -73,7 +73,7 @@ class Draw {
     let speedx = 0
     let timerx
     const timer = setInterval(() => {
-      if (speed < window.document.documentElement.clientHeight) {
+      if (speed < this.clientHeight) {
         ele.style.top = `${speed}px`
         speed += rate
       } else {
@@ -84,7 +84,7 @@ class Draw {
       }
     }, 40)
     timerx = setInterval(() => {
-      if (speed < window.document.documentElement.clientHeight) {
+      if (speed < this.clientHeight) {
         ele.style.left = `${startPosLeft + speedx}px`
         if (speedx < range && flag) {
           speedx += 1
