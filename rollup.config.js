@@ -1,16 +1,15 @@
 import uglify from 'rollup-plugin-uglify'
-import commonjs from 'rollup-plugin-commonjs'
-import packageInfo from './package.json'
+import babel from 'rollup-plugin-babel'
 
 export default {
   input: 'src/index.js',
   output: {
-    file: `dist/${packageInfo.name}.min.js`,
+    file: 'dist/draw.min.js',
     format: 'iife',
     name: 'Draw'
   },
   plugins: [
-    commonjs(),
+    babel(),
     uglify()
   ]
 }
