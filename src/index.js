@@ -20,7 +20,7 @@ class Draw {
     this.count = 0 // 数量
     this.parent = parent
     this.clientWidth = window.document.documentElement.clientWidth
-    this.clientHeight = window.document.documentElement.clientHeight
+    this.ScrollHeight = Math.max(window.document.documentElement.clientHeight, window.document.body.scrollHeight, window.document.documentElement.scrollHeight)
     if (!this.parent) {
       this.parent = window.document.createElement('div')
       this.parent.id = `draw-wrap${Draw.id}`
@@ -76,7 +76,7 @@ class Draw {
     let speedx = 0
     let timerx
     const timer = setInterval(() => {
-      if (speed < this.clientHeight) {
+      if (speed < this.ScrollHeight) {
         ele.style.top = `${speed}px`
         speed += rate
       } else {
@@ -87,7 +87,7 @@ class Draw {
       }
     }, 40)
     timerx = setInterval(() => {
-      if (speed < this.clientHeight) {
+      if (speed < this.ScrollHeight) {
         ele.style.left = `${startPosLeft + speedx}px`
         if (speedx < range && flag) {
           speedx += 1
