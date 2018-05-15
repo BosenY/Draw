@@ -20,7 +20,11 @@ class Draw {
     this.count = 0 // 数量
     this.parent = parent
     this.clientWidth = window.document.documentElement.clientWidth
-    this.ScrollHeight = Math.max(window.document.documentElement.clientHeight, window.document.body.scrollHeight, window.document.documentElement.scrollHeight)
+    this.ScrollHeight = Math.max(
+      window.document.documentElement.clientHeight,
+      window.document.body.scrollHeight,
+      window.document.documentElement.scrollHeight
+    )
     if (!this.parent) {
       this.parent = window.document.createElement('div')
       this.parent.id = `draw-wrap${Draw.id}`
@@ -63,7 +67,7 @@ class Draw {
     )
   }
   draw(ele) {
-    const startPosLeft = Math.ceil(Math.random() * this.clientWidth)
+    const startPosLeft = ~~(Math.random() * this.clientWidth)
     const rate = Number.parseInt(Math.random() * 3, 10) + 1
     let range =
       startPosLeft > this.clientWidth - startPosLeft
@@ -103,10 +107,10 @@ class Draw {
     }, 150)
   }
   setStyle(ele, startPosLeft) {
-    ele.style.opacity = (Math.ceil(Math.random() * 3) + 7) / 10
+    ele.style.opacity = (~~(Math.random() * 3) + 7) / 10
     ele.style.left = `${startPosLeft}px`
     ele.style.color = this.color
-    ele.style.fontSize = `${12 + Math.ceil(Math.random() * 14)}px`
+    ele.style.fontSize = `${12 + ~~(Math.random() * 14)}px`
     ele.style.transform = `rotate(${Number.parseInt(Math.random() * 360, 10)}deg)`
   }
   end() {
